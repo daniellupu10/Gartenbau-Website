@@ -1,0 +1,57 @@
+﻿
+> temp_init@0.1.0 build
+> next build
+
+node.exe : ÔÜá Warning: Next.js inferred your workspace 
+root, but it may not be correct.
+In Zeile:1 Zeichen:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ÔÜá Warning: 
+    Ne...not be correct.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+ We detected multiple lockfiles and selected the 
+directory of C:\Users\danie\package-lock.json as the root 
+directory.
+ To silence this warning, set `turbopack.root` in your 
+Next.js config, or consider removing one of the lockfiles 
+if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/ne
+xt-config-js/turbopack#root-directory for more 
+information.
+ Detected additional lockfiles: 
+   * C:\Users\danie\Desktop\webseite 
+Gartenbau\package-lock.json
+
+Ôû▓ Next.js 16.1.4 (Turbopack)
+
+  Creating an optimized production build ...
+Ô£ô Compiled successfully in 7.5s
+  Running TypeScript ...
+Failed to compile.
+
+.next/dev/types/validator.ts:125:39
+Type error: Cannot find module 
+'../../../app/api/calendar/availability/route.js' or its 
+corresponding type declarations.
+
+[0m [90m 123 |[39m {
+ [90m 124 |[39m   type 
+__IsExpected[33m<[39m[33mSpecific[39m 
+[36mextends[39m [33mRouteHandlerConfig[39m[33m<[39m
+[32m"/api/calendar/availability"[39m[33m>>[39m 
+[33m=[39m [33mSpecific[39m
+[31m[1m>[22m[39m[90m 125 |[39m   [36mconst[39m 
+handler [33m=[39m {} [36mas[39m [36mtypeof[39m [36m
+import[39m([32m"../../../app/api/calendar/availability/r
+oute.js"[39m)
+ [90m     |[39m                                       
+[31m[1m^[22m[39m
+ [90m 126 |[39m   type __Check [33m=[39m 
+__IsExpected[33m<[39m[36mtypeof[39m handler[33m>[39m
+ [90m 127 |[39m   [90m// @ts-ignore[39m
+ [90m 128 |[39m   type __Unused [33m=[39m __Check[0m
+Next.js build worker exited with code: 1 and signal: null

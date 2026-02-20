@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import {
     CheckCircle2, MapPin, Phone, Mail, Clock, ShieldCheck,
-    Leaf, TreePine, Shovel, Droplets, Grass, Construction, Trash2, Scissors
+    Leaf, TreePine, Shovel, Droplets, Construction, Trash2, Scissors
 } from "lucide-react"
 import { CityVectorBackground } from "@/components/ui/CityVectorBackground"
 import { ProcessAnimation } from "@/components/sections/ProcessAnimation"
