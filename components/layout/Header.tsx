@@ -119,54 +119,59 @@ export function Header() {
           </nav>
 
           {/* Mobile Nav */}
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Menü öffnen</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <SheetTitle className="text-left text-lg font-bold text-primary flex items-center gap-2 mb-6 text-foreground">
-                <Leaf className="h-5 w-5" /> AP Gartenbau
-              </SheetTitle>
-              <nav className="flex flex-col gap-4">
-                <Link href="/" onClick={() => setIsOpen(false)} className="text-lg font-bold py-2 border-b">Startseite</Link>
+          <div className="flex md:hidden items-center gap-2 bg-black/20 backdrop-blur-md rounded-full pr-1 pl-3 shadow-sm border border-white/10">
+            <Link href="/termin" className="text-xs font-bold text-white uppercase tracking-wider hover:text-primary transition-colors">
+              Termin
+            </Link>
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="h-9 w-9 text-white hover:text-primary rounded-full hover:bg-white/10">
+                  <Menu className="h-5 w-5" />
+                  <span className="sr-only">Menü öffnen</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                <SheetTitle className="text-left text-lg font-bold text-primary flex items-center gap-2 mb-6 text-foreground">
+                  <Leaf className="h-5 w-5" /> AP Gartenbau
+                </SheetTitle>
+                <nav className="flex flex-col gap-4">
+                  <Link href="/" onClick={() => setIsOpen(false)} className="text-lg font-bold py-2 border-b">Startseite</Link>
 
-                {/* Mobile Locations (Simple List) */}
-                <div className="space-y-4 py-2">
-                  <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-                    <MapPin className="w-3 h-3" /> Top Standorte
-                  </p>
-                  <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-                    {TOP_CITIES.slice(0, 8).map(city => (
-                      <Link key={city.slug} href={`/standorte/${city.slug}`} onClick={() => setIsOpen(false)} className="text-sm py-1 font-medium text-foreground/80 hover:text-primary">{city.name}</Link>
-                    ))}
-                    <Link href="/standorte" onClick={() => setIsOpen(false)} className="text-sm py-1 font-bold text-primary">Alle Orte →</Link>
+                  {/* Mobile Locations (Simple List) */}
+                  <div className="space-y-4 py-2">
+                    <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground flex items-center gap-2">
+                      <MapPin className="w-3 h-3" /> Top Standorte
+                    </p>
+                    <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+                      {TOP_CITIES.slice(0, 8).map(city => (
+                        <Link key={city.slug} href={`/standorte/${city.slug}`} onClick={() => setIsOpen(false)} className="text-sm py-1 font-medium text-foreground/80 hover:text-primary">{city.name}</Link>
+                      ))}
+                      <Link href="/standorte" onClick={() => setIsOpen(false)} className="text-sm py-1 font-bold text-primary">Alle Orte →</Link>
+                    </div>
                   </div>
-                </div>
 
-                <Link href="/services" onClick={() => setIsOpen(false)} className="text-lg font-bold py-2 border-b border-t mt-2">Leistungen</Link>
-                <Link href="/about" onClick={() => setIsOpen(false)} className="text-lg font-bold py-2 border-b">Über Uns</Link>
+                  <Link href="/services" onClick={() => setIsOpen(false)} className="text-lg font-bold py-2 border-b border-t mt-2">Leistungen</Link>
+                  <Link href="/about" onClick={() => setIsOpen(false)} className="text-lg font-bold py-2 border-b">Über Uns</Link>
 
-                <div className="mt-8 flex flex-col gap-4">
-                  <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold h-12 rounded-xl">
-                    <Link href="/termin" onClick={() => setIsOpen(false)}>
-                      Termin buchen
-                    </Link>
-                  </Button>
-                  <div className="flex flex-col gap-3 mt-4 text-sm text-muted-foreground">
-                    <a href="tel:+4915166587383" className="flex items-center gap-3 font-medium hover:text-primary transition-colors">
-                      <Phone className="h-4 w-4" /> +49 151 66587383
-                    </a>
-                    <a href="mailto:gartenbauu@gmail.com" className="flex items-center gap-3 font-medium hover:text-primary transition-colors">
-                      <Mail className="h-4 w-4" /> gartenbauu@gmail.com
-                    </a>
+                  <div className="mt-8 flex flex-col gap-4">
+                    <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold h-12 rounded-xl">
+                      <Link href="/termin" onClick={() => setIsOpen(false)}>
+                        Termin buchen
+                      </Link>
+                    </Button>
+                    <div className="flex flex-col gap-3 mt-4 text-sm text-muted-foreground">
+                      <a href="tel:+4915166587383" className="flex items-center gap-3 font-medium hover:text-primary transition-colors">
+                        <Phone className="h-4 w-4" /> +49 151 66587383
+                      </a>
+                      <a href="mailto:gartenbauu@gmail.com" className="flex items-center gap-3 font-medium hover:text-primary transition-colors">
+                        <Mail className="h-4 w-4" /> gartenbauu@gmail.com
+                      </a>
+                    </div>
                   </div>
-                </div>
-              </nav>
-            </SheetContent>
-          </Sheet>
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>
