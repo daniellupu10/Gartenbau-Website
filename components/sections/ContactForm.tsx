@@ -53,8 +53,8 @@ export function ContactForm() {
                             <p className="text-white text-lg font-medium">+49 151 66587383</p>
                         </div>
                         <div className="space-y-1">
-                            <p className="text-white font-bold uppercase tracking-widest text-xs">Büro</p>
-                            <p className="text-white text-lg font-medium">Stuttgart, DE</p>
+                            <p className="text-white font-bold uppercase tracking-widest text-xs">Einsatzgebiet</p>
+                            <p className="text-white text-lg font-medium">Enzkreis & BW</p>
                         </div>
                     </div>
                 </div>

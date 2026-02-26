@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
+import { WhyUs } from "@/components/sections/WhyUs"
+
 export default function AboutPage() {
     return (
         <div className="min-h-screen bg-background pt-32 pb-20">
@@ -19,7 +21,7 @@ export default function AboutPage() {
                         <span className="text-primary italic">Moderne</span>
                     </h1>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start pb-24">
                         <p className="text-2xl md:text-3xl text-muted-foreground font-medium leading-relaxed">
                             Seit über 15 Jahren sind wir Ihr vertrauensvoller Partner für hochwertige Garten- und Landschaftsgestaltung in Baden-Württemberg. Unser Fokus liegt auf der Verbindung von Ästhetik und Funktionalität.
                         </p>
@@ -38,6 +40,10 @@ export default function AboutPage() {
                                 </p>
                             </div>
                         </div>
+                    </div>
+
+                    <div className="border-t border-white/10 pt-24">
+                        <WhyUs />
                     </div>
 
                     <motion.div

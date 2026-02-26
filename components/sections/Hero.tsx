@@ -37,7 +37,7 @@ export function Hero() {
             <SplineScene />
 
             {/* Content Container (Arrow Only) */}
-            <div className="absolute inset-0 z-10 flex flex-col items-center justify-end pb-12 pointer-events-none">
+            <div className="absolute inset-0 z-10 flex flex-col items-center justify-end pb-32 md:pb-12 pointer-events-none">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}

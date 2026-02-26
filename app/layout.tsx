@@ -19,10 +19,14 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "AP Gartenbau | Professioneller Garten- & Landschaftsbau",
+  title: "AP Gartenbau",
   description: "Ihr Experte für Gartengestaltung, Pflege und Landschaftsbau in Baden-Württemberg. Jetzt kostenloses Angebot anfordern!",
   metadataBase: new URL("https://ap-gartenbau.de"),
   keywords: ["Gartenbau", "Landschaftsbau", "Gartenpflege", "Baden-Württemberg", "Stuttgart", "Karlsruhe"],
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg"
+  },
   openGraph: {
     type: "website",
     locale: "de_DE",

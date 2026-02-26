@@ -35,7 +35,7 @@ export function Footer() {
                         <h3 className="font-bold text-lg">Navigation</h3>
                         <ul className="space-y-2 text-sm text-primary-foreground/80">
                             <li><Link href="/" className="hover:text-white transition-colors">Startseite</Link></li>
-                            <li><Link href="/about" className="hover:text-white transition-colors">Über Uns</Link></li>
+                            <li><Link href="/about" className="hover:text-white transition-colors">Wer wir sind</Link></li>
                             <li><Link href="/termin" className="hover:text-white transition-colors">Termin buchen</Link></li>
                             <li><Link href="/standorte" className="hover:text-white transition-colors">Einsatzgebiete</Link></li>
                             <li><Link href="/contact" className="hover:text-white transition-colors">Kontakt</Link></li>
@@ -46,10 +46,7 @@ export function Footer() {
                     <div className="space-y-4">
                         <h3 className="font-bold text-lg">Kontakt</h3>
                         <ul className="space-y-3 text-sm text-primary-foreground/80">
-                            <li className="flex items-start gap-3">
-                                <MapPin className="h-5 w-5 shrink-0 mt-0.5" />
-                                <span>Musterstraße 123<br />70173 Stuttgart</span>
-                            </li>
+                            {/* Address removed as per user request */}
                             <li className="flex items-center gap-3">
                                 <Phone className="h-5 w-5 shrink-0" />
                                 <a href="tel:+4915166587383" className="hover:text-white transition-colors">+49 151 66587383</a>

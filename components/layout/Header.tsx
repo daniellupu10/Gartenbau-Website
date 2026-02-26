@@ -105,7 +105,7 @@ export function Header() {
                 "relative py-1 text-sm font-bold transition-all duration-300 hover:scale-110 group flex flex-col items-center",
                 pathname === "/about" ? "text-primary" : "text-white/90"
               )}>
-                Über Uns
+                Wer wir sind
                 <span className={cn(
                   "absolute -bottom-1 w-0 h-0.5 bg-primary transition-all duration-500 group-hover:w-full group-hover:shadow-[0_0_10px_rgba(var(--primary),0.8)]",
                   pathname === "/about" && "w-full"
@@ -151,7 +151,7 @@ export function Header() {
                   </div>
 
                   <Link href="/services" onClick={() => setIsOpen(false)} className="text-lg font-bold py-2 border-b border-t mt-2">Leistungen</Link>
-                  <Link href="/about" onClick={() => setIsOpen(false)} className="text-lg font-bold py-2 border-b">Über Uns</Link>
+                  <Link href="/about" onClick={() => setIsOpen(false)} className="text-lg font-bold py-2 border-b">Wer wir sind</Link>
 
                   <div className="mt-8 flex flex-col gap-4">
                     <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold h-12 rounded-xl">
