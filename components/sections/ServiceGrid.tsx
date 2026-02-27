@@ -75,8 +75,8 @@ const services = [
         iconColor: "text-orange-500"
     },
     {
-        title: "Pflasterarbeiten",
-        description: "Verlegung von Wegen, Einfahrten und Terrassen aus hochwertigen Steinen.",
+        title: "Gartengestaltung",
+        description: "Gestaltung von Wegen, Einfahrten und Terrassen aus hochwertigen Steinen.",
         icon: Mountain,
         color: "bg-slate-500/10",
         iconColor: "text-slate-500"

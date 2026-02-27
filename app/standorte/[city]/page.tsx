@@ -24,7 +24,7 @@ const ALL_SERVICES = [
     { title: "Vertikutieren", icon: <Construction className="w-6 h-6" /> },
     { title: "Unkrautentfernung", icon: <Droplets className="w-6 h-6" /> },
     { title: "Laubentfernung", icon: <Leaf className="w-6 h-6" /> },
-    { title: "Pflasterarbeiten", icon: <Shovel className="w-6 h-6" /> },
+    { title: "Gartengestaltung", icon: <Shovel className="w-6 h-6" /> },
     { title: "Heckenpflanzung", icon: <TreePine className="w-6 h-6" /> },
     { title: "Grünabfallentsorgung", icon: <Trash2 className="w-6 h-6" /> },
     { title: "Entrümpelung Zäune", icon: <Construction className="w-6 h-6" /> }
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     return {
         title: `Gartenbau ${location.name} | Profi-Gartengestaltung & Pflege`,
-        description: `Ihr Experte für Gartenbau in ${location.name}. Von Heckenschnitt bis Pflasterarbeiten - Ihr Garten in ${location.name} ist bei uns in besten Händen.`,
+        description: `Ihr Experte für Gartenbau in ${location.name}. Von Heckenschnitt bis Gartengestaltung - Ihr Garten in ${location.name} ist bei uns in besten Händen.`,
         openGraph: {
             title: `Gartenbau ${location.name} | Profi-Gartengestaltung & Pflege`,
             description: `Ihr lokaler Gärtner für ${location.name}. Jetzt kostenlose Besichtigung anfordern!`,

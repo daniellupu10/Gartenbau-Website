@@ -22,7 +22,7 @@ const SERVICES = [
     "Vertikutieren",
     "Unkrautentfernung",
     "Laubentfernung",
-    "Pflasterarbeiten",
+    "Gartengestaltung",
     "Heckenpflanzung",
     "Grünabfallentsorgung",
     "Entrümpelung Zäune"
