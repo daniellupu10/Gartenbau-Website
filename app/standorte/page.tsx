@@ -28,7 +28,7 @@ export default function LocationsIndex() {
             <section className="relative overflow-hidden bg-primary py-32 text-white z-10 min-h-[50vh] flex flex-col justify-center">
                 {/* 3D Spline Background */}
                 <div className="absolute inset-0 z-0 opacity-60 mix-blend-screen pointer-events-none">
-                    <Spline scene="loading..." />
+                    <Spline scene="https://prod.spline.design/OpMMEhMKObiExUY0/scene.splinecode" />
                 </div>
 
                 {/* Green Overlay to maintain brand color and text readability */}
