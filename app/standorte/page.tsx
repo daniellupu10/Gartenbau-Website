@@ -1,3 +1,4 @@
+import Spline from '@splinetool/react-spline/next'
 import { getAllLocations } from "@/lib/locations"
 import Link from "next/link"
 import { MapPin, ArrowRight } from "lucide-react"
@@ -24,8 +25,17 @@ export default function LocationsIndex() {
     return (
         <div className="flex flex-col min-h-screen">
             {/* Hero Section */}
-            <section className="bg-primary py-24 text-white">
-                <div className="container px-4 mx-auto text-center">
+            <section className="relative overflow-hidden bg-primary py-32 text-white z-10 min-h-[50vh] flex flex-col justify-center">
+                {/* 3D Spline Background */}
+                <div className="absolute inset-0 z-0 opacity-60 mix-blend-screen pointer-events-none">
+                    <Spline scene="loading..." />
+                </div>
+
+                {/* Green Overlay to maintain brand color and text readability */}
+                <div className="absolute inset-0 bg-primary/80 z-0 mix-blend-multiply" />
+                <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-primary/30 to-primary/80 z-0" />
+
+                <div className="container relative z-10 px-4 mx-auto text-center">
                     <h1 className="text-4xl md:text-7xl font-bold font-heading mb-8 tracking-tighter">
                         Unsere <span className="italic opacity-80">Einsatzgebiete</span>
                     </h1>

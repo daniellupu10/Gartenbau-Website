@@ -1,3 +1,4 @@
+import Spline from '@splinetool/react-spline/next'
 import { getAllLocations } from "@/lib/locations"
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
@@ -77,8 +78,18 @@ export default async function LocationPage({ params }: Props) {
             <CityVectorBackground seed={location.name} />
 
             {/* Unique Hero for SEO */}
-            <section className="relative overflow-hidden bg-primary/95 py-24 text-white z-10">
-                <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1558905619-17254263becd?q=80&w=2000')] bg-cover bg-center mix-blend-overlay" />
+            <section className="relative overflow-hidden bg-primary/95 py-32 text-white z-10 min-h-[70vh] flex flex-col justify-center">
+                {/* 3D Spline Background */}
+                <div className="absolute inset-0 z-0 opacity-60 mix-blend-screen pointer-events-none">
+                    <Spline scene="loading..." />
+                </div>
+
+                {/* Green Overlay to maintain brand color and text readability */}
+                <div className="absolute inset-0 bg-primary/80 z-0 mix-blend-multiply" />
+                <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-primary/30 to-primary/80 z-0" />
+
+                <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1558905619-17254263becd?q=80&w=2000')] bg-cover bg-center mix-blend-overlay z-0" />
+
                 <div className="container relative z-10 px-4 mx-auto text-center">
                     <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-white/20">
                         <MapPin className="w-3 h-3 text-accent" /> Exklusives Einsatzgebiet: {location.name}
