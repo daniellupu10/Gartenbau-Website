@@ -69,50 +69,45 @@ export function BookingForm() {
                         exit={{ opacity: 0, scale: 0.95 }}
                         className="bg-card p-8 md:p-12 rounded-3xl border border-border shadow-2xl space-y-8 max-w-4xl mx-auto"
                     >
-                        <div className="space-y-2 text-center md:text-left">
-                            <h3 className="text-4xl font-bold font-heading text-primary">Termin vereinbaren</h3>
-                            <p className="text-muted-foreground text-lg">Wählen Sie Ihre gewünschten Leistungen aus. Mehrfachauswahl ist möglich.</p>
+                        <div className="space-y-6">
+                            <h3 className="text-4xl font-bold font-heading text-primary text-center">Termin vereinbaren</h3>
                         </div>
 
                         <div className="grid gap-8">
-                            <div className="space-y-4">
-                                <Label className="text-lg font-semibold text-foreground">Welche Leistungen interessieren Sie?</Label>
+                            <DropdownMenu>
+                                <DropdownMenuTrigger asChild>
+                                    <Button variant="outline" className="w-full h-16 justify-between text-left text-xl rounded-2xl border-2 border-primary/10 hover:border-primary/30 bg-background px-6">
+                                        {formData.services.length === 0
+                                            ? "Leistungen auswählen..."
+                                            : `${formData.services.length} Leistungen ausgewählt`}
+                                        <ChevronRight className="ml-2 h-6 w-6 transition-transform rotate-90" />
+                                    </Button>
+                                </DropdownMenuTrigger>
+                                <DropdownMenuContent className="w-[calc(100vw-4rem)] max-w-2xl rounded-xl shadow-2xl p-0 bg-card border-primary/20 overflow-hidden">
+                                    <div className="max-h-[300px] overflow-y-auto p-2 outline-none">
+                                        {SERVICES.map((s) => (
+                                            <DropdownMenuCheckboxItem
+                                                key={s}
+                                                checked={formData.services.includes(s)}
+                                                onCheckedChange={() => handleServiceToggle(s)}
+                                                className="text-lg py-4 px-4 cursor-pointer text-foreground focus:bg-primary/5 rounded-lg"
+                                            >
+                                                {s}
+                                            </DropdownMenuCheckboxItem>
+                                        ))}
+                                    </div>
+                                </DropdownMenuContent>
+                            </DropdownMenu>
 
-                                <DropdownMenu>
-                                    <DropdownMenuTrigger asChild>
-                                        <Button variant="outline" className="w-full h-16 justify-between text-left text-xl rounded-2xl border-2 border-primary/10 hover:border-primary/30 bg-background px-6">
-                                            {formData.services.length === 0
-                                                ? "Leistungen auswählen..."
-                                                : `${formData.services.length} Leistungen ausgewählt`}
-                                            <ChevronRight className="ml-2 h-6 w-6 transition-transform rotate-90" />
-                                        </Button>
-                                    </DropdownMenuTrigger>
-                                    <DropdownMenuContent className="w-[calc(100vw-4rem)] max-w-2xl rounded-xl shadow-2xl p-0 bg-card border-primary/20 overflow-hidden">
-                                        <div className="max-h-[300px] overflow-y-auto p-2 outline-none">
-                                            {SERVICES.map((s) => (
-                                                <DropdownMenuCheckboxItem
-                                                    key={s}
-                                                    checked={formData.services.includes(s)}
-                                                    onCheckedChange={() => handleServiceToggle(s)}
-                                                    className="text-lg py-4 px-4 cursor-pointer text-foreground focus:bg-primary/5 rounded-lg"
-                                                >
-                                                    {s}
-                                                </DropdownMenuCheckboxItem>
-                                            ))}
-                                        </div>
-                                    </DropdownMenuContent>
-                                </DropdownMenu>
-
-                                <div className="flex flex-wrap gap-2 pt-2">
-                                    {formData.services.map(s => (
-                                        <Badge key={s} variant="secondary" className="bg-primary/10 text-primary border-primary/20 text-sm py-1.5 px-3 rounded-full flex items-center gap-2">
-                                            {s}
-                                            <button onClick={() => handleServiceToggle(s)} className="hover:text-red-500 transition-colors font-bold">
-                                                ×
-                                            </button>
-                                        </Badge>
-                                    ))}
-                                </div>
+                            <div className="flex flex-wrap gap-2 pt-2">
+                                {formData.services.map(s => (
+                                    <Badge key={s} variant="secondary" className="bg-primary/10 text-primary border-primary/20 text-sm py-1.5 px-3 rounded-full flex items-center gap-2">
+                                        {s}
+                                        <button onClick={() => handleServiceToggle(s)} className="hover:text-red-500 transition-colors font-bold">
+                                            ×
+                                        </button>
+                                    </Badge>
+                                ))}
                             </div>
                         </div>
 
@@ -125,7 +120,7 @@ export function BookingForm() {
                                     setIframeLoading(true);
                                 }}
                             >
-                                Weiter zur Terminauswahl
+                                Weiter
                                 <ChevronRight className="ml-3 h-8 w-8 group-hover:translate-x-1 transition-transform" />
                             </Button>
                         </div>
@@ -183,6 +178,6 @@ export function BookingForm() {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </div>
+        </div >
     )
 }

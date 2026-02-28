@@ -137,20 +137,8 @@ export function Header() {
                 <nav className="flex flex-col gap-4">
                   <Link href="/" onClick={() => setIsOpen(false)} className="text-lg font-bold py-2 border-b">Startseite</Link>
 
-                  {/* Mobile Locations (Simple List) */}
-                  <div className="space-y-4 py-2">
-                    <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-                      <MapPin className="w-3 h-3" /> Top Standorte
-                    </p>
-                    <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-                      {TOP_CITIES.slice(0, 8).map(city => (
-                        <Link key={city.slug} href={`/standorte/${city.slug}`} onClick={() => setIsOpen(false)} className="text-sm py-1 font-medium text-foreground/80 hover:text-primary">{city.name}</Link>
-                      ))}
-                      <Link href="/standorte" onClick={() => setIsOpen(false)} className="text-sm py-1 font-bold text-primary">Alle Orte →</Link>
-                    </div>
-                  </div>
-
-                  <Link href="/services" onClick={() => setIsOpen(false)} className="text-lg font-bold py-2 border-b border-t mt-2">Leistungen</Link>
+                  <Link href="/standorte" onClick={() => setIsOpen(false)} className="text-lg font-bold py-2 border-b">Standorte</Link>
+                  <Link href="/services" onClick={() => setIsOpen(false)} className="text-lg font-bold py-2 border-b">Leistungen</Link>
                   <Link href="/about" onClick={() => setIsOpen(false)} className="text-lg font-bold py-2 border-b">Wer wir sind</Link>
 
                   <div className="mt-8 flex flex-col gap-4">
