@@ -22,9 +22,19 @@ export default function AboutPage() {
                     </h1>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start pb-24">
-                        <p className="text-2xl md:text-3xl text-muted-foreground font-medium leading-relaxed">
-                            Seit über 15 Jahren sind wir Ihr vertrauensvoller Partner für hochwertige Garten- und Landschaftsgestaltung in Baden-Württemberg. Unser Fokus liegt auf der Verbindung von Ästhetik und Funktionalität.
-                        </p>
+                        <div className="space-y-8">
+                            <p className="text-2xl md:text-3xl text-muted-foreground font-medium leading-relaxed">
+                                Seit über 15 Jahren sind wir Ihr vertrauensvoller Partner für hochwertige Garten- und Landschaftsgestaltung in Baden-Württemberg. Unser Fokus liegt auf der Verbindung von Ästhetik und Funktionalität.
+                            </p>
+                            {/* Placeholder for the user's image */}
+                            <div className="relative w-full h-[500px] rounded-3xl overflow-hidden bg-white/5">
+                                <img 
+                                    src="/team.png" 
+                                    alt="Andrei Priala und Daniel Lupu - Geschäftsführer AP Gartenbau GmbH" 
+                                    className="object-contain w-full h-full"
+                                />
+                            </div>
+                        </div>
 
                         <div className="space-y-12">
                             <div className="space-y-4">
@@ -36,7 +46,7 @@ export default function AboutPage() {
                             <div className="space-y-4">
                                 <h3 className="text-3xl font-bold font-heading uppercase tracking-tight">Unser Team</h3>
                                 <p className="text-lg text-muted-foreground leading-relaxed">
-                                    Professionelle Meister, erfahrene Landschaftsgärtner und visionäre Planer arbeiten bei uns Hand in Hand. Wir garantieren deutsche Wertarbeit mit Liebe zum Detail.
+                                    Als Geschäftsführer stehen wir, Andrei Priala und Daniel Lupu, gemeinsam mit unseren erfahrenen Landschaftsgärtnern für deutsche Wertarbeit mit Liebe zum Detail. Professionelle Planung und Ausführung gehen bei uns Hand in Hand.
                                 </p>
                             </div>
                         </div>
