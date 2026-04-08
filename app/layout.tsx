@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -44,6 +45,18 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${poppins.variable} font-sans antialiased flex flex-col min-h-screen relative`}
       >
+        {/* Iubenda Cookie Consent Widget */}
+        <Script 
+          type="text/javascript" 
+          src="https://embeds.iubenda.com/widgets/f9b3d36d-0611-434c-bb63-a3faf5534124.js" 
+          strategy="afterInteractive" 
+        />
+        {/* Iubenda core script for embedding policies */}
+        <Script 
+          type="text/javascript" 
+          src="https://cdn.iubenda.com/iubenda.js" 
+          strategy="afterInteractive" 
+        />
         <SmoothScrollProvider>
           <Header />
           <main className="flex-grow">
