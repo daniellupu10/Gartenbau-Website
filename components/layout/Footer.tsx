@@ -63,7 +63,7 @@ export function Footer() {
                     <p>&copy; {new Date().getFullYear()} AP Gartenbau. Alle Rechte vorbehalten.</p>
                     <div className="flex gap-6">
                         <Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link>
-                        <a href="https://www.iubenda.com/privacy-policy/76942473" className="iubenda-white iubenda-noiframe iubenda-embed hover:text-white transition-colors" title="Datenschutzerklärung">Datenschutz</a>
+                        <a href="https://www.iubenda.com/privacy-policy/76942473" className="iubenda-white iubenda-noiframe iubenda-embed hover:text-white transition-colors" title="Datenschutzerklärung">Datenschutzerklärung</a>
                         <a href="https://www.iubenda.com/privacy-policy/76942473/cookie-policy" className="iubenda-white iubenda-noiframe iubenda-embed hover:text-white transition-colors" title="Cookie-Richtlinie">Cookie-Richtlinie</a>
                         <Link href="/agb" className="hover:text-white transition-colors">AGB</Link>
                     </div>
